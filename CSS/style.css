@@ -1,0 +1,25 @@
+body {
+    background: url("8aiWeL.webp");
+}
+
+#cv-template {
+    display: none;
+}
+
+.myimg {
+    border: 3px solid gold;
+    border-radius: 50%;
+    width: 200px;
+}
+
+.background {
+    background-color: rgb(157, 213, 224);
+}
+
+.background1 {
+    background-color: rgb(157, 213, 224);
+}
+
+.color {
+    background-color: rgba(54, 54, 204, 0.91);
+}

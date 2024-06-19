@@ -1,0 +1,49 @@
+body {
+    background: url("8aiWeL.webp");
+}
+
+#cv-template {
+    display: none;
+}
+
+.myimg {
+    border: 3px solid gold;
+    border-radius: 50%;
+    width: 200px;
+}
+
+.background {
+    background-color: rgb(200, 211, 199);
+}
+
+.background1 {
+    background-color: rgb(112, 196, 213);
+}
+
+.color {
+    background-color: rgba(4, 72, 245, 0.91);
+}
+
+.button {
+    background-color: #555555;
+    border-radius: 70%;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  .button1 {
+    background-color: #555555;
+    border-radius: 70%;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }

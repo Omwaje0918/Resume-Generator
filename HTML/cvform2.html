@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="style2.css">
+
+    <title>Resume</title>
+</head>
+
+<body>
+
+    <!--HTML Code-->
+    <div class="container" id="cv-form">
+        <h1 class="text-center my-3">Resume Generator</h1>
+        <p class="text-center">
+            <font face="arial"><b>Mini Project</b></font>
+        </p>
+
+        <div class="row">
+
+            <div class="col-md-6">
+                <h3 class="text-center">
+                    <font face="arial"><b>Personal Details </b></font>
+                </h3>
+
+                <div class="form-group">
+                    <label for="">Select your photo for profile picture</label>
+                    <input id="imgField" type="file" class="form-control">
+                </div>
+
+                <div class="form-group mt-3">
+                    <lable class="nameFField">
+                        <font face="Arial">
+                            <b>Full Name</b>
+                        </font>
+                    </lable>
+                    <input type="text" id="nameFField" placeholder="Enter Here" class="form-control">
+                </div>
+
+                <div class="form-group mt-3">
+                    <lable class="contactField">
+                        <font face="Arial">
+                            <b>Phone No.</b>
+                        </font>
+                    </lable>
+                    <input type="text" id="contactField" placeholder="Enter Here" class="form-control">
+                </div>
+
+                <div class="form-group mt-3">
+                    <lable class="addressField">
+                        <font face="Arial">
+                            <b>Address</b>
+                        </font>
+                    </lable>
+                    <textarea id="addressField" rows="5" placeholder="Enter Here" class="form-control"></textarea>
+                </div>
+
+                <p class="text-secondary my-3">
+                    <font face="Arial" size="5"><i>Important Links:</i></font>
+                </p>
+
+                <div class="form-group mt-3">
+                    <lable class="gmField">
+                        <font face="Arial">
+                            <b>GMail</b>
+                        </font>
+                    </lable>
+                    <input type="text" id="gmField" placeholder="Enter Here" class="form-control">
+                </div>
+
+                <div class="form-group mt-3">
+                    <lable class="ghField">
+                        <font face="Arial">
+                            <b>GitHub ID</b>
+                        </font>
+                    </lable>
+                    <input type="text" id="ghField" placeholder="Enter Here" class="form-control">
+                </div>
+
+                <div class="form-group mt-3">
+                    <lable class="lField">
+                        <font face="Arial">
+                            <b>LinkedIn Profile</b>
+                        </font>
+                    </lable>
+                    <input type="text" id="linkField" placeholder="Enter Here" class="form-control">
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <h3 class="text-center">
+                    <font face="Arial"><b>Professional Information
+                        </b></font>
+                </h3>
+
+                <div class="form-group mt-3">
+                    <lable class="">
+                        <font face="Arial">
+                            <b>About You</b>
+                        </font>
+                    </lable>
+                    <textarea rows="3" id="aboutField" placeholder="Enter Here" class="form-control"></textarea>
+                </div>
+
+                <div class="form-group mt-3">
+                    <lable class="">
+                        <font face="Arial">
+                            <b>Objective</b>
+                        </font>
+                    </lable>
+                    <textarea rows="4" id="objectiveField" placeholder="Enter Here" class="form-control"></textarea>
+                </div>
+
+                <div class="form-group mt-3" id="we">
+                    <lable class="">
+                        <font face="Arial">
+                            <b>Work Experience</b>
+                        </font>
+                    </lable>
+                    <textarea rows="2" placeholder="Enter Here" class="form-control weField"></textarea>
+
+
+
+                    <div class="container text-center mt-2" id="weAddButton">
+                        <button class="button" onclick="addNewWEField()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+                </div>
+
+                <div class="form-group mt-3" id="aq">
+                    <lable class="">
+                        <font face="Arial">
+                            <b>Academic Qualification</b>
+                        </font>
+                    </lable>
+                    <textarea rows="2" placeholder="Enter Here" class="form-control aqField"></textarea>
+
+                    <div class="container text-center mt-2" id="aqAddButton">
+                        <button class="button" onclick="addNewAQField()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+                </div>
+
+                <div class="form-group mt-3" id="sk">
+                    <lable class="">
+                        <font face="Arial">
+                            <b>Skill Sets</b>
+                        </font>
+                    </lable>
+                    <textarea rows="1" placeholder="Enter Here" class="form-control skField"></textarea>
+
+
+
+                    <div class="container text-center mt-2" id="skAddButton">
+                        <button class="button" onclick="addNewSKField()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+                </div>
+
+                <div class="form-group mt-3" id="ach">
+                    <lable class="">
+                        <font face="Arial">
+                            <b>Achievements</b>
+                        </font>
+                    </lable>
+                    <textarea rows="1" placeholder="Enter Here" class="form-control achField"></textarea>
+
+
+
+                    <div class="container text-center mt-2" id="achAddButton">
+                        <button class="button" onclick="addNewACHField()" class="btn btn-primary btn-sm">Add</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="container text-center mt-4">
+            <button class="button1" onclick="generateCV()" class="btn btn-primary btn-lg">Generate CV</button>
+        </div>
+
+    </div>
+
+    <!--CV Template -->
+    <div class="container" id="cv-template">
+
+        <div class="row">
+
+            <div class="col-md-5 text-center py-5 background">
+                <!--First Column-->
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQa9aZaBVIwyx-C6Os35WtNviD00boWcWfpQ&usqp=CAU"
+                    alt="" class="img-fluid myimg" id="imgT">
+
+                <div class="container">
+                    <p id="nameT1">ABC XYZ</p>
+                    <p id="contactT">123984567</p>
+                    <p id="addressT"> Pillai College of Engineering, Sector-16, Panvel</p>
+
+                    <hr>
+
+                    <p><a id="mailT" href="#1">https://www.mail.google.com/</a></p>
+                    <p><a id="ghT" href="#1">https://www.github.com/</a></p>
+                    <p><a id="linkT" href="#1">https://www.linkedin.com</a></p>
+                </div>
+            </div>
+
+            <div class="col-md-7 py-5">
+                <!--Second Column-->
+                <h1 id="nameT2" class="text-center" style="font-weight: 980">ABC XYZ</h1>
+
+                <div class="card mt-4">
+                    <div class="card-header background1">
+                        <h3>About You</h3>
+                    </div>
+                    <div class="card-body">
+                        <p id="aboutT">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi aliquid placeat iste autem
+                            asperiores corporis iure provident dicta laboriosam? Ipsa saepe nisi, nam facere nemo
+                            debitis
+                            neque dolorum sunt quam itaque. Quaerat omnis non, accusantium id sit nulla nihil alias modi
+                            temporibus, autem culpa mollitia fuga consequatur rerum repellendus dolores?
+                        </p>
+                    </div>
+                </div>
+
+                <!--Objective Card-->
+                <div class="card mt-4">
+                    <div class="card-header background1">
+                        <h3>Objective</h3>
+                    </div>
+                    <div class="card-body">
+                        <p id="objectiveT">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi aliquid placeat iste autem
+                            asperiores corporis iure provident dicta laboriosam? Ipsa saepe nisi, nam facere nemo
+                            debitis
+                            neque dolorum sunt quam itaque. Quaerat omnis non, accusantium id sit nulla nihil alias modi
+                            temporibus, autem culpa mollitia fuga consequatur rerum repellendus dolores?
+                        </p>
+                    </div>
+                </div>
+
+                <!--Work Experience-->
+                <div class="card mt-4">
+                    <div class="card-header background1">
+                        <h3>Work Experience</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="weT">
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, at.</li>
+
+                            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, facilis!</li>
+
+                            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi, libero.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card mt-4">
+                    <div class="card-header background1">
+                        <h3>Academic Qualification</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="aqT">
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, at.</li>
+
+                            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, facilis!</li>
+
+                            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi, libero.</li>
+
+                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto, consequuntur!</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <div class="card mt-4">
+                    <div class="card-header background1">
+                        <h3>Skill Sets</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="skT">
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, at.</li>
+
+                            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, facilis!</li>
+
+                            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi, libero.</li>
+
+                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto, consequuntur!</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card mt-4">
+                    <div class="card-header background1">
+                        <h3>Achievements</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="achT">
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, at.</li>
+
+                            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, facilis!</li>
+
+                            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi, libero.</li>
+
+                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iusto, consequuntur!</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="container mt-4 text-center">
+                    <button class="button1" onclick="printCV()" class="btn color">
+                        Print CV
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <script src="script2.js">
+
+    </script>
+</body>
+
+</html>
